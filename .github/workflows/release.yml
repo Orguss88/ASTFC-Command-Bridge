@@ -1,0 +1,23 @@
+name: Create release
+
+# Push a tag like v0.0.2 (with releases/v0.0.2.md written) and this creates the
+# GitHub release with those notes. Then drag the zip onto the release page.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create release from releases/<tag>.md
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$TAG" --title "ASTFC Voice Protocol ${TAG#v} (test build)" \
+            --notes-file "releases/$TAG.md" --verify-tag
