@@ -1,7 +1,7 @@
 name: Create release
 
 # Add releases/vX.Y.Z.md on main and this creates release vX.Y.Z with those
-# notes (skips any that already exist). Then drag the zip onto the release page.
+# notes (existing releases get their notes refreshed). Then drag the zip onto the release page.
 on:
   push:
     branches: [main]
@@ -23,7 +23,8 @@ jobs:
           for notes in releases/v*.md; do
             tag=$(basename "$notes" .md)
             if gh release view "$tag" >/dev/null 2>&1; then
-              echo "$tag already exists"
+              gh release edit "$tag" --notes-file "$notes"   # keep notes in step with the file
+              echo "$tag notes updated"
             else
               gh release create "$tag" --target main --notes-file "$notes" \
                 --title "ASTFC Voice Protocol ${tag#v} (test build)"

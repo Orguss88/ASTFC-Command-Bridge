@@ -12,7 +12,8 @@ Offline voice commands for Star Citizen, by the **Astral Frontier Covenant** (AS
 
 ## Before you start
 
-1. **Unzip the whole folder**, then open `ASTFC Voice Protocol.exe`. It won't run from inside the zip.
+1. Download **`ASTFC-Voice-Protocol-<version>-Setup.exe`** and run it (installs for your account, no admin needed).
+   Portable option: the `windows.zip`; extract the whole folder and run `ASTFC Voice Protocol.exe` inside it.
 2. Windows may warn that the app is unrecognised (it isn't signed yet): **More info → Run anyway**.
 3. The app uses your **Windows default microphone** (Settings › System › Sound; Privacy & security › Microphone).
 4. Offline speech needs **English** in Windows: Settings › Time & language › Speech.
