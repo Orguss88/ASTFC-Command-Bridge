@@ -1,10 +1,12 @@
 name: Create release
 
-# Push a tag like v0.0.2 (with releases/v0.0.2.md written) and this creates the
-# GitHub release with those notes. Then drag the zip onto the release page.
+# Add releases/vX.Y.Z.md on main and this creates release vX.Y.Z with those
+# notes (skips any that already exist). Then drag the zip onto the release page.
 on:
   push:
-    tags: ["v*"]
+    branches: [main]
+    paths: ["releases/*.md"]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -14,10 +16,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Create release from releases/<tag>.md
+      - name: Create a release for each new notes file
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ github.ref_name }}
         run: |
-          gh release create "$TAG" --title "ASTFC Voice Protocol ${TAG#v} (test build)" \
-            --notes-file "releases/$TAG.md" --verify-tag
+          for notes in releases/v*.md; do
+            tag=$(basename "$notes" .md)
+            if gh release view "$tag" >/dev/null 2>&1; then
+              echo "$tag already exists"
+            else
+              gh release create "$tag" --target main --notes-file "$notes" \
+                --title "ASTFC Voice Protocol ${tag#v} (test build)"
+            fi
+          done
