@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASTFC Voice Protocol — Download</title>
+<meta name="description" content="Offline voice commands for Star Citizen, by the Astral Frontier Covenant. Free download for Windows.">
+<style>
+  :root {
+    --bg: #081B2B; --bg2: #1F3856; --panel: #10283D; --raised: #18354C; --border: #5A7A94;
+    --text: #F4F7FA; --text2: #C4D3DF; --accent: #D4AF37; --accent-text: #081B2B;
+    --info: #8EC9F1; --focus: #8EC9F1; --success: #5EEAD4; --warning: #D4AF37;
+  }
+  html[data-theme="hc"] {
+    --bg: #000000; --bg2: #000000; --panel: #101010; --raised: #191919; --border: #FFFFFF;
+    --text: #FFFFFF; --text2: #E0E0E0; --accent: #00CFFF; --accent-text: #000000;
+    --info: #E0E0E0; --focus: #00CFFF; --success: #00CFFF; --warning: #FFB547;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.55;
+         font: 17px/1.55 "Inter", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; }
+  a { color: var(--info); text-underline-offset: 3px; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--accent); color: var(--accent-text); padding: 8px 14px; }
+  .skip:focus { left: 8px; }
+  header { background: var(--bg2); border-bottom: 1px solid var(--border); }
+  .bar { max-width: 1040px; margin: 0 auto; padding: 14px 22px; display: flex; align-items: center; gap: 14px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-right: auto; }
+  .brand b { font-family: "Orbitron", "Bahnschrift", "Segoe UI Semibold", sans-serif; letter-spacing: 2px; font-size: 1.15rem; display: block; }
+  .brand small { color: var(--accent); letter-spacing: 3px; font-size: .72rem; font-weight: 600; }
+  button.theme { background: var(--raised); color: var(--text); border: 1px solid var(--border); border-radius: 6px;
+                 padding: 8px 14px; font: inherit; font-size: .9rem; cursor: pointer; }
+  button.theme:hover { border-color: var(--accent); }
+  main { max-width: 1040px; margin: 0 auto; padding: 0 22px 60px; }
+  .hero { padding: 54px 0 30px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 34px; align-items: center; }
+  h1 { font-family: "Orbitron", "Bahnschrift", "Segoe UI Semibold", sans-serif; font-size: clamp(1.8rem, 4vw, 2.6rem);
+       line-height: 1.15; margin: 0 0 14px; letter-spacing: 1px; }
+  .lead { color: var(--text2); font-size: 1.1rem; margin: 0 0 24px; }
+  .download { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: var(--accent-text);
+              font-weight: 800; font-size: 1.1rem; padding: 15px 26px; border-radius: 8px; text-decoration: none; }
+  .download:hover { box-shadow: 0 0 0 3px var(--text) inset; }
+  .meta { color: var(--text2); font-size: .92rem; margin-top: 12px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; border: 2px solid var(--warning); color: var(--warning);
+          border-radius: 6px; padding: 3px 10px; font-weight: 800; font-size: .8rem; letter-spacing: 1px; margin-bottom: 14px; }
+  figure { margin: 0; }
+  figure img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: 10px; display: block; }
+  figcaption { color: var(--text2); font-size: .88rem; margin-top: 8px; }
+  h2 { font-family: "Orbitron", "Bahnschrift", "Segoe UI Semibold", sans-serif; font-size: 1.3rem; letter-spacing: 1px; margin: 44px 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.02rem; }
+  .card p { margin: 0; color: var(--text2); }
+  ol.steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  ol.steps li { counter-increment: s; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px 14px 62px; position: relative; }
+  ol.steps li::before { content: counter(s); position: absolute; left: 16px; top: 13px; width: 32px; height: 32px; border-radius: 50%;
+                        border: 2px solid var(--accent); color: var(--text); font-weight: 800; display: grid; place-items: center; }
+  table { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--raised); }
+  kbd { background: var(--raised); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; font: .88em ui-monospace, Consolas, monospace; }
+  .status { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+  .status span { border: 2px solid; border-radius: 6px; padding: 4px 10px; font-weight: 800; font-size: .85rem; letter-spacing: 1px; }
+  footer { border-top: 1px solid var(--border); color: var(--text2); font-size: .9rem; }
+  footer .bar { display: block; }
+  @media (max-width: 820px) { .hero { grid-template-columns: 1fr; padding-top: 34px; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="bar">
+    <div class="brand">
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M8 30 A18 17 0 1 0 12 10" fill="none" stroke="#8EC9F1" stroke-width="3" stroke-linecap="round"/>
+        <path d="M25.5 1.5 L28.6 13.6 L40.5 16.7 L28.6 19.8 L25.5 31.9 L22.4 19.8 L10.5 16.7 L22.4 13.6 Z" fill="#D4AF37"/>
+      </svg>
+      <div><b>ASTFC VOICE PROTOCOL</b><small>ASTRAL FRONTIER COVENANT</small></div>
+    </div>
+    <button class="theme" id="theme" type="button" aria-pressed="false">High Contrast</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div>
+      <div class="chip" role="note"><span aria-hidden="true">▲</span> EARLY TEST BUILD · v0.0.1</div>
+      <h1>Fly Star Citizen with your voice.</h1>
+      <p class="lead">Say “landing gear”, “request landing” or “engage quantum”, and ASTFC Voice Protocol presses the key for you.
+        Speech recognition runs offline on your PC; nothing you say is sent anywhere.</p>
+      <a class="download" href="https://github.com/Orguss88/ASTFC-Voice-Protocol/releases/latest">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download for Windows
+      </a>
+      <p class="meta">Free · Windows 10 or 11 · about 50 MB · no install needed<br>
+        <a href="https://github.com/Orguss88/ASTFC-Voice-Protocol/blob/main/Commands%200.0.1.txt">What you can say (Commands 0.0.1)</a> ·
+        <a href="https://github.com/Orguss88/ASTFC-Voice-Protocol/releases">All versions</a></p>
+    </div>
+    <figure>
+      <img id="shot" src="assets/dashboard-standard.png" width="1280" height="900"
+           alt="The ASTFC Voice Protocol dashboard: a listening indicator, the last command heard and the key it pressed, and recent activity with SUCCESS and WARNING labels.">
+      <figcaption id="shot-caption">The dashboard in the ASTFC Standard theme.</figcaption>
+    </figure>
+  </section>
+
+  <h2>Before you start</h2>
+  <ol class="steps">
+    <li><b>Unzip the whole folder</b> (right-click the zip › Extract All), then open <b>ASTFC Voice Protocol.exe</b> inside it. It won't run from inside the zip.</li>
+    <li><b>Windows may say it protected your PC</b> because the app isn't signed yet. Click <b>More info</b>, then <b>Run anyway</b>.</li>
+    <li><b>Check your microphone.</b> The app uses your Windows default mic. If nothing is heard, see Windows Settings › Privacy &amp; security › Microphone, and Settings › System › Sound.</li>
+    <li><b>Offline speech needs English installed in Windows:</b> Settings › Time &amp; language › Speech.</li>
+    <li><b>It starts in simulation:</b> it shows what it heard but presses no keys. When you're ready, turn on <b>Live keys</b> in Settings. Keys only go to Star Citizen while its window is in front.</li>
+  </ol>
+
+  <h2>What it does</h2>
+  <div class="grid">
+    <div class="card"><h3>71 voice commands</h3><p>Ship power, gear, ATC, quantum, scanning, mining and salvage modes, power triangle and more. Star Citizen 4.10.2 default keys; change any key or phrase in the app.</p></div>
+    <div class="card"><h3>Safety checks</h3><p>“Confirm mode.” before quantum and scan, “Are you sure?” before self destruct or quitting, and “Command not bound.” when a command has no key.</p></div>
+    <div class="card"><h3>Private and offline</h3><p>Uses the speech recognizer built into Windows. No account, no cloud, no internet needed to run.</p></div>
+  </div>
+
+  <h2>Made to be readable</h2>
+  <div class="grid">
+    <div class="card"><h3>Two themes, both colour-blind safe</h3><p>ASTFC Standard and High Contrast. No red-versus-green anywhere. Switch with <kbd>Ctrl</kbd>+<kbd>T</kbd>.</p></div>
+    <div class="card"><h3>Never colour alone</h3><p>Every status shows an icon and a word as well as a colour:</p>
+      <div class="status" aria-label="Status examples">
+        <span style="color:var(--success)">✓ SUCCESS</span><span style="color:var(--warning)">▲ WARNING</span><span style="color:var(--info)">ⓘ INFO</span>
+      </div></div>
+    <div class="card"><h3>Your size, your keyboard</h3><p>Text from 100 to 150 % (<kbd>Ctrl</kbd>+<kbd>+</kbd>/<kbd>−</kbd>), compact or comfortable layout, and everything works from the keyboard.</p></div>
+  </div>
+
+  <h2>Safety words</h2>
+  <table>
+    <thead><tr><th scope="col">The app says</th><th scope="col">You answer</th><th scope="col">When</th></tr></thead>
+    <tbody>
+      <tr><td>“Confirm mode.”</td><td>“mode confirm” (within 10 s)</td><td>Before “engage quantum” or “activate scan”, unless you set that mode by voice in the last 30 s.</td></tr>
+      <tr><td>“Are you sure?”</td><td>“affirmative” to go, “negative” to cancel (within 5 s)</td><td>Before self destruct, goon mode and quitting the game.</td></tr>
+      <tr><td>“Command not bound.”</td><td>Nothing; set a key in Voice Commands</td><td>The command exists, but Star Citizen has no default key for it.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Feedback</h2>
+  <p>This is an early build for ASTFC members and friends. Tell Jeff on the ASTFC Discord what worked, what didn't, and how easy the screens are to read.
+    In the app, <b>Activity › Save log…</b> makes a file you can send. You can also
+    <a href="https://github.com/Orguss88/ASTFC-Voice-Protocol/issues">open an issue on GitHub</a>.</p>
+</main>
+
+<footer>
+  <div class="bar">
+    ASTFC Voice Protocol is a fan-made tool by the Astral Frontier Covenant, not affiliated with Cloud Imperium Games.
+    Star Citizen® is a trademark of Cloud Imperium Rights LLC.
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement, btn = document.getElementById('theme');
+    var shot = document.getElementById('shot'), cap = document.getElementById('shot-caption');
+    function apply(hc) {
+      root.dataset.theme = hc ? 'hc' : '';
+      btn.textContent = hc ? 'ASTFC Standard' : 'High Contrast';
+      btn.setAttribute('aria-pressed', hc ? 'true' : 'false');
+      btn.setAttribute('aria-label', 'Switch to ' + btn.textContent + ' theme');
+      shot.src = hc ? 'assets/dashboard-high-contrast.png' : 'assets/dashboard-standard.png';
+      cap.textContent = 'The dashboard in the ' + (hc ? 'High Contrast' : 'ASTFC Standard') + ' theme.';
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('astfc-theme'); } catch (e) {}
+    var prefersMore = window.matchMedia && window.matchMedia('(prefers-contrast: more)').matches;
+    apply(saved ? saved === 'hc' : prefersMore);
+    btn.addEventListener('click', function () {
+      var hc = root.dataset.theme !== 'hc';
+      apply(hc);
+      try { localStorage.setItem('astfc-theme', hc ? 'hc' : 'standard'); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>
