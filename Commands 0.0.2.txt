@@ -1,0 +1,170 @@
+ASTFC Voice Protocol — Commands 0.0.2
+Star Citizen 4.10.2 LIVE · keyboard + mouse default keybinds
+
+HOW TO USE
+  1. Start the app. It begins in SIMULATION: it shows what it heard but presses nothing.
+  2. Say a phrase below and watch the dashboard. Try a few before going live.
+  3. To fly with it: Settings > Game input > Live keys. Keys only go to Star Citizen
+     while its window is in front.
+  4. If you changed a keybind in game, change it in the app too (Voice Commands > Edit).
+
+SAFETY WORDS
+  "Confirm mode."  The app asks this before "engage quantum" / "activate scan" unless you set
+                   that mode by voice in the last 30 s. Answer "mode confirm" within 10 s.
+  "Are you sure?"  Asked before self destruct, goon mode and quitting the game.
+                   Answer "affirmative" within 5 s, or "negative" to cancel.
+  "Command not bound."  The command exists but has no key in Star Citizen's defaults.
+
+TESTED IN GAME (21)  — Jeff, SC 4.10.2 LIVE, November 2026
+==========================================================
+
+[Ship Power]
+  Ship Power On                     U                      say: "ship power on" / "power on" / "turn ship on" / "turn on ship"
+  Ship Power Off                    U                      say: "ship power off" / "power off" / "turn ship off" / "turn off ship"
+
+[Engines & Lights]
+  Engines / Thrusters On            I                      say: "engines on" / "engine on" / "start engines" / "start engine"
+  Engines / Thrusters Off           I                      say: "engines off" / "engine off" / "stop engines" / "stop engine"
+
+[Landing & ATC]
+  Landing Gear Toggle               N                      say: "landing gear" / "gear up" / "raise gear" / "retract gear"
+  Contact ATC                       Left Alt+N             say: "contact atc" / "call atc" / "request landing" / "request landing permission"
+
+[Quantum]
+  Engage Quantum                    hold Left Mouse 1.2 s  say: "engage quantum" / "quantum jump" / "jump quantum"
+
+[Power Management]
+  Raise Weapon Power                F5                     say: "raise weapon power" / "increase weapon power"
+  Raise Thruster Power              F6                     say: "raise thruster power" / "increase thruster power"
+  Raise Shield Power                F7                     say: "raise shield power" / "increase shield power"
+  Reset Power                       F8                     say: "reset power" / "balance power"
+
+[Flight]
+  Cruise Control                    Left Alt+C             say: "cruise control" / "toggle cruise control"
+  VTOL Toggle                       K                      say: "vtol" / "v toll" / "vertical takeoff" / "vertical takeoff and landing"
+  Master Mode (SCM / NAV)           hold B 0.8 s           say: "master mode" / "switch master mode"
+
+[Utility]
+  Exit Seat                         hold Y 1.2 s           say: "exit seat" / "leave seat" / "get out of seat"
+
+[Mining & Scanning]
+  Set Mining Operator Mode          M                      say: "mining mode" / "start mining"
+  Scan Mode                         V                      say: "scan mode" / "scanner mode"
+  Activate Ping                     hold Tab 1 s           say: "ping" / "radar ping"
+  Activate Scanning                 hold Left Mouse 2 s    say: "activate scan" / "start scan"
+
+[Operator Modes]
+  Set Salvage Operator Mode         M                      say: "salvage mode" / "start salvage"
+  Cycle Industrial Operator Modes   M                      say: "next mode" / "cycle mode" / "cycle industrial" / "next industrial mode"
+
+INCLUDED BUT NOT TESTED YET (37)  — should work; please report
+==============================================================
+
+[Engines & Lights]
+  Lights On                         L                      say: "lights on" / "turn lights on" / "ship lights on"
+  Lights Off                        L                      say: "lights off" / "turn lights off" / "ship lights off"
+
+[Landing & ATC]
+  Auto Land                         hold N 1 s             say: "auto land" / "autoland" / "auto landing" / "land the ship"
+
+[Power Management]
+  Power To Shields                  O                      say: "power to shields" / "shields power"
+  Power To Weapons                  P                      say: "power to weapons" / "weapons power"
+
+[Flight]
+  Toggle Flight Mode                C                      say: "toggle flight mode" / "decoupled mode" / "coupled mode" / "decoupled"
+
+[Utility]
+  Unlock Components                 Right Alt+K            say: "unlock components"
+  Night Vision                      Right Alt+L            say: "night vision" / "toggle night vision"
+
+[Mining & Scanning]
+  Jettison Cargo                    Left Alt+J             say: "confirm jettison"
+
+[Special]
+  Self Destruct                     hold Backspace 1.5 s   say: "self destruct" / "activate self destruct" / "start self destruct"
+  Goon Mode                         hold Backspace 5 s     say: "goon mode"
+  Turn Off Star Citizen             Alt+F4                 say: "turn off star citizen"
+
+[Targeting]
+  Target Ship                       T                      say: "target ship" / "target target" / "lock target" / "target that ship"
+  Switch Hostile Target             5                      say: "switch target" / "next target" / "cycle target" / "change target"
+  Hail Target                       9                      say: "hail target"
+
+[Ship Weapons]
+  Next Weapon Preset                Wheel Down             say: "weapon preset" / "next weapon preset" / "switch weapon preset" / "next weapon group"
+  Previous Weapon Preset            Wheel Up               say: "previous weapon preset" / "last weapon preset" / "previous weapon group" / "last weapon group"
+  Ship Zoom / Precision Aim         Left Alt+Right Mouse   say: "ship zoom" / "zoom ship" / "precision targeting" / "precision aim"
+
+[Interface]
+  Show / Hide Chat                  F12                    say: "hide chat" / "show chat" / "toggle chat" / "close chat"
+  Open / Close MobiGlas             F1                     say: "open mobiglass" / "close mobiglass" / "toggle mobiglass" / "open mobi glass"
+  Open Starmap                      F2                     say: "open map" / "open starmap" / "star map" / "show map"
+
+[On Foot - Utility]
+  Open Inventory                    I                      say: "open inventory" / "inventory" / "show inventory" / "close inventory"
+
+[On Foot - Weapons]
+  Switch Weapon / Primary           1                      say: "switch weapon" / "weapon one" / "primary weapon" / "primary"
+  Secondary Weapon                  2                      say: "weapon two" / "secondary weapon" / "secondary"
+  Sidearm                           3                      say: "weapon three" / "sidearm" / "pistol"
+  Weapon Four                       4                      say: "weapon four"
+  Reload                            R                      say: "reload" / "reload weapon"
+
+[On Foot - Movement]
+  Interact                          F                      say: "interact" / "use"
+  Jump                              Space                  say: "jump"
+  Crouch                            C                      say: "crouch"
+  Sprint                            hold Left Shift 1.5 s  say: "sprint" / "run"
+
+[Operator Modes]
+  Set Refuel Operator Mode          M                      say: "refuel mode"
+
+[Doors & Docking]
+  Docking                           Right Alt+N            say: "request docking" / "docking" / "dock" / "commence docking"
+
+[Salvage]
+  Toggle Fire Fracture              Right Alt+W            say: "fracture" / "fire fracture" / "engage fracture"
+  Toggle Fire Disintegrate          Right Alt+S            say: "disintegrate" / "fire disintegrate"
+
+[Countermeasures]
+  Deploy Decoy                      H                      say: "launch decoy" / "decoys" / "flares"
+  Deploy Noise                      J                      say: "launch noise" / "noise"
+
+NO DEFAULT KEY (13)  — says "Command not bound." until you set a key
+====================================================================
+
+[Quantum]
+  Set Quantum Operator Mode         not bound              say: "toggle quantum" / "quantum mode" / "nav mode"
+
+[Shields]
+  Raise Front Shields               not bound              say: "shields front" / "shield front" / "more shields front" / "boost front shields"
+  Raise Rear Shields                not bound              say: "shields back" / "shield back" / "shields rear" / "rear shields"
+  Raise Left Shields                not bound              say: "shields left" / "shield left" / "left shields" / "more shields left"
+  Raise Right Shields               not bound              say: "shields right" / "shield right" / "right shields" / "more shields right"
+  Raise Top Shields                 not bound              say: "shields top" / "shield top" / "top shields" / "more shields top"
+  Raise Bottom Shields              not bound              say: "shields bottom" / "shield bottom" / "bottom shields" / "more shields bottom"
+  Reset Shield Levels               not bound              say: "reset shields" / "balance shields" / "even shields" / "normalize shields"
+
+[Operator Modes]
+  Set Missile Operator Mode         not bound              say: "missile mode" / "missiles"
+
+[Doors & Docking]
+  Open All Doors                    not bound              say: "open doors" / "open all doors"
+  Close All Doors                   not bound              say: "close doors" / "close all doors"
+  Lock All Doors                    not bound              say: "lock doors" / "lock all doors"
+  Unlock All Doors                  not bound              say: "unlock doors" / "unlock all doors"
+
+KNOWN QUIRKS
+  - Hyun (mining + salvage ship): "salvage mode" may open mining mode first. Say it again,
+    or say "next mode" to cycle.
+  - Mode changes made by hand (stick button, middle mouse) are invisible to the app, so it may
+    ask "Confirm mode." even when you are already in the right mode.
+  - Scan mode and mining mode are toggles: saying them twice switches the mode off again.
+  - Auto land only works with gear down, close above your assigned pad. Not yet tested on the Hyun.
+  - The app listens to the Windows default microphone (Settings > System > Sound).
+  - Discord: if the app hears nothing while Discord is open, untick "Allow applications to take
+    exclusive control" in your mic's Properties > Advanced (Sound settings > Recording tab),
+    make the headset mic the Default Device, then press "Reconnect microphone".
+
+Report problems and readability feedback to Jeff (ASTFC Discord).

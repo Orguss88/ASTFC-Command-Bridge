@@ -4,9 +4,9 @@ Offline voice commands for Star Citizen, by the **Astral Frontier Covenant** (AS
 
 **[⬇ Download the latest version for Windows](https://github.com/Orguss88/ASTFC-Voice-Protocol/releases/latest)**
 · Download page: https://orguss88.github.io/ASTFC-Voice-Protocol/
-· [What you can say (Commands 0.0.1)](Commands%200.0.1.txt)
+· [What you can say (Commands 0.0.2)](Commands%200.0.2.txt)
 
-> ▲ **Early test build (v0.0.1).** Please report what works and what doesn't on the ASTFC Discord.
+> ▲ **Early test build (v0.0.2).** Please report what works and what doesn't on the ASTFC Discord.
 
 ![The dashboard in the ASTFC Standard theme](assets/dashboard-standard.png)
 
