@@ -1,12 +1,14 @@
+<img src="assets/icon-256.png" width="96" alt="ASTFC Voice Protocol icon" align="right">
+
 # ASTFC Voice Protocol — downloads
 
 Offline voice commands for Star Citizen, by the **Astral Frontier Covenant** (ASTFC).
 
 **[⬇ Download the installer for the latest version](https://github.com/Orguss88/ASTFC-Voice-Protocol/releases/latest/download/ASTFC-Voice-Protocol-Setup.exe)** · [release notes](https://github.com/Orguss88/ASTFC-Voice-Protocol/releases/latest)
 · Download page: https://orguss88.github.io/ASTFC-Voice-Protocol/
-· [What you can say (Commands 0.0.2)](Commands%200.0.2.txt)
+· [What you can say (Commands list)](Commands.txt)
 
-> ▲ **Early test build (v0.0.2).** Please report what works and what doesn't on the ASTFC Discord.
+> ▲ **Early test build.** Please report what works and what doesn't on the ASTFC Discord.
 
 ![The dashboard in the ASTFC Standard theme](assets/dashboard-standard.png)
 
