@@ -1,11 +1,9 @@
 name: Create release
 
-# Add releases/vX.Y.Z.md on main and this creates release vX.Y.Z with those
-# notes (existing releases get their notes refreshed). Then drag the zip onto the release page.
+# Manual fallback only. Normal releases are published from the private source repo
+# (ideal-engine > Actions > "Publish ASTFC Voice Protocol"), which also uploads the files.
+# Running this creates a release for any releases/vX.Y.Z.md that has none yet.
 on:
-  push:
-    branches: [main]
-    paths: ["releases/*.md"]
   workflow_dispatch:
 
 permissions:
@@ -23,8 +21,7 @@ jobs:
           for notes in releases/v*.md; do
             tag=$(basename "$notes" .md)
             if gh release view "$tag" >/dev/null 2>&1; then
-              gh release edit "$tag" --notes-file "$notes"   # keep notes in step with the file
-              echo "$tag notes updated"
+              echo "$tag already exists"
             else
               gh release create "$tag" --target main --notes-file "$notes" \
                 --title "ASTFC Voice Protocol ${tag#v} (test build)"

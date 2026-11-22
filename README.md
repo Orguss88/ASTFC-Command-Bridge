@@ -2,7 +2,7 @@
 
 Offline voice commands for Star Citizen, by the **Astral Frontier Covenant** (ASTFC).
 
-**[⬇ Download the latest version for Windows](https://github.com/Orguss88/ASTFC-Voice-Protocol/releases/latest)**
+**[⬇ Download the installer for the latest version](https://github.com/Orguss88/ASTFC-Voice-Protocol/releases/latest/download/ASTFC-Voice-Protocol-Setup.exe)** · [release notes](https://github.com/Orguss88/ASTFC-Voice-Protocol/releases/latest)
 · Download page: https://orguss88.github.io/ASTFC-Voice-Protocol/
 · [What you can say (Commands 0.0.2)](Commands%200.0.2.txt)
 
@@ -12,8 +12,8 @@ Offline voice commands for Star Citizen, by the **Astral Frontier Covenant** (AS
 
 ## Before you start
 
-1. Download **`ASTFC-Voice-Protocol-<version>-Setup.exe`** and run it (installs for your account, no admin needed).
-   Portable option: the `windows.zip`; extract the whole folder and run `ASTFC Voice Protocol.exe` inside it.
+1. Download **`ASTFC-Voice-Protocol-Setup.exe`** and run it (installs for your account, no admin needed).
+   Portable option: `ASTFC-Voice-Protocol-portable.zip` on the release page; extract the whole folder and run `ASTFC Voice Protocol.exe` inside it.
 2. Windows may warn that the app is unrecognised (it isn't signed yet): **More info → Run anyway**.
 3. The app uses your **Windows default microphone** (Settings › System › Sound; Privacy & security › Microphone).
 4. Offline speech needs **English** in Windows: Settings › Time & language › Speech.
@@ -29,6 +29,9 @@ Offline voice commands for Star Citizen, by the **Astral Frontier Covenant** (AS
 
 This repository only holds downloads, release notes and the download page (`index.html`,
 published with GitHub Pages). The app's source is kept in a separate private repository.
+
+Releases are published automatically from the source repository when Jeff approves a build
+(its "Publish ASTFC Voice Protocol" workflow). The `releases/` folder here is a record of past notes.
 
 ASTFC Voice Protocol is a fan-made tool, not affiliated with Cloud Imperium Games.
 Star Citizen® is a trademark of Cloud Imperium Rights LLC.
