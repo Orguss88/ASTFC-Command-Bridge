@@ -1,8 +1,9 @@
-ASTFC Voice Protocol — Commands 0.0.2
+ASTFC Command Bridge — Commands 0.0.3
 Star Citizen 4.10.2 LIVE · keyboard + mouse default keybinds
 
 HOW TO USE
   1. Start the app. It begins in SIMULATION: it shows what it heard but presses nothing.
+     Scroll Lock turns listening on and off (change the key or use push-to-talk in Settings).
   2. Say a phrase below and watch the dashboard. Try a few before going live.
   3. To fly with it: Settings > Game input > Live keys. Keys only go to Star Citizen
      while its window is in front.
@@ -15,7 +16,7 @@ SAFETY WORDS
                    Answer "affirmative" within 5 s, or "negative" to cancel.
   "Command not bound."  The command exists but has no key in Star Citizen's defaults.
 
-TESTED IN GAME (21)  — Jeff, SC 4.10.2 LIVE, November 2026
+TESTED IN GAME (22)  — Jeff, SC 4.10.2 LIVE, November 2026
 ==========================================================
 
 [Ship Power]
@@ -53,11 +54,14 @@ TESTED IN GAME (21)  — Jeff, SC 4.10.2 LIVE, November 2026
   Activate Ping                     hold Tab 1 s           say: "ping" / "radar ping"
   Activate Scanning                 hold Left Mouse 2 s    say: "activate scan" / "start scan"
 
+[On Foot - Movement]
+  Interact                          F                      say: "interact" / "use"
+
 [Operator Modes]
   Set Salvage Operator Mode         M                      say: "salvage mode" / "start salvage"
   Cycle Industrial Operator Modes   M                      say: "next mode" / "cycle mode" / "cycle industrial" / "next industrial mode"
 
-INCLUDED BUT NOT TESTED YET (37)  — should work; please report
+INCLUDED BUT NOT TESTED YET (36)  — should work; please report
 ==============================================================
 
 [Engines & Lights]
@@ -112,7 +116,6 @@ INCLUDED BUT NOT TESTED YET (37)  — should work; please report
   Reload                            R                      say: "reload" / "reload weapon"
 
 [On Foot - Movement]
-  Interact                          F                      say: "interact" / "use"
   Jump                              Space                  say: "jump"
   Crouch                            C                      say: "crouch"
   Sprint                            hold Left Shift 1.5 s  say: "sprint" / "run"
@@ -163,6 +166,8 @@ KNOWN QUIRKS
   - Scan mode and mining mode are toggles: saying them twice switches the mode off again.
   - Auto land only works with gear down, close above your assigned pad. Not yet tested on the Hyun.
   - The app listens to the Windows default microphone (Settings > System > Sound).
+  - Discord: set Discord to Push to Talk on a different key than the app's talk key, so your
+    commands don't go out on voice chat.
   - Discord: if the app hears nothing while Discord is open, untick "Allow applications to take
     exclusive control" in your mic's Properties > Advanced (Sound settings > Recording tab),
     make the headset mic the Default Device, then press "Reconnect microphone".
