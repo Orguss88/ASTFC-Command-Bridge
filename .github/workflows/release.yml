@@ -1,7 +1,7 @@
 name: Create release
 
 # Manual fallback only. Normal releases are published from the private source repo
-# (ideal-engine > Actions > "Publish ASTFC Voice Protocol"), which also uploads the files.
+# (ideal-engine > Actions > "Publish ASTFC Command Bridge"), which also uploads the files.
 # Running this creates a release for any releases/vX.Y.Z.md that has none yet.
 on:
   workflow_dispatch:
@@ -24,6 +24,6 @@ jobs:
               echo "$tag already exists"
             else
               gh release create "$tag" --target main --notes-file "$notes" \
-                --title "ASTFC Voice Protocol ${tag#v} (test build)"
+                --title "ASTFC Command Bridge ${tag#v} (test build)"
             fi
           done
